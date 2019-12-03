@@ -12,7 +12,7 @@
         @csrf
         <div class="form-group">
             <label for="nama">Nama</label>
-            <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Masukkan Nama" name="nama">
+            <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Masukkan Nama" name="nama" value="{{ old('nama') }}">
             @error('nama')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             <label for="nrp">NRP</label>
-            <input type="text" class="form-control @error('nrp') is-invalid @enderror" id="nrp" placeholder="Masukkan Nrp" name="nrp">
+            <input type="text" class="form-control @error('nrp') is-invalid @enderror" id="nrp" placeholder="Masukkan Nrp" name="nrp" value="{{ old('nrp') }}">
             @error('nrp')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -30,11 +30,11 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="Masukkan Email" name="email">
+            <input type="text" class="form-control" id="email" placeholder="Masukkan Email" name="email" value="{{ old('email') }}">
         </div>
         <div class="form-group">
             <label for="jurusan">Jurusan</label>
-            <input type="text" class="form-control" id="jurusan" placeholder="Masukkan Jurusan" name="jurusan">
+            <input type="text" class="form-control" id="jurusan" placeholder="Masukkan Jurusan" name="jurusan" value="{{ old('jurusan') }}">
         </div>
         <button type="submit" class="btn btn-primary">Tambah Data!</button>
         </form>

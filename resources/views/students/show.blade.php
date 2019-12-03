@@ -15,7 +15,12 @@
                 <p class="card-text">{{$student->nrp}}</p>
                 <p class="card-text">{{$student->jurusan}}</p>
                 <a href="#" class="btn btn-success">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <form action="{{ $student->id }}" method="post" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button type="submit" class ="btn btn-danger">Delete</button>
+                </form>
+                <!-- <a href="#" class="btn btn-danger" type="submit">Delete</a> -->
                 <a href="{{url('students/')}}" class="card-link">Kembali</a>
             </div>
             </div>
