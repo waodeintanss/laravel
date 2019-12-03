@@ -14,7 +14,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{$student->email}}</h6>
                 <p class="card-text">{{$student->nrp}}</p>
                 <p class="card-text">{{$student->jurusan}}</p>
-                <a href="#" class="btn btn-success">Edit</a>
+                <a href="/students/{{ $student->id }}/edit" class="btn btn-success">Edit</a>
                 <form action="{{ $student->id }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
